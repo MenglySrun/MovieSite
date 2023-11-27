@@ -28,7 +28,7 @@ const goto = useNavigate()
   return (
     <div class='login'>
       <div className='bg-transparent'></div>
-      <div className='h-96 w-96 bg-sky-500 items-center justify-center mx-96 rounded-xl mt-12'>
+      <div className='h-96 w-96 bg-red-500 items-center justify-center mx-96 rounded-xl mt-12 md:bg-green-500 ml-7 w-80 h-80'>
         <form onSubmit={HandleLogin}>
           <h1 className='flex justify-center text-2xl font-extrabold pt-7'>Log In</h1><p/>
           <label className='flex justify-center mt-7'>
