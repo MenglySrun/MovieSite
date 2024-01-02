@@ -7,6 +7,7 @@ import Signup from './Components/Signup'
 import Login from './Components/Login';
 import { AuthProvider } from './Components/Auth';
 import Home from './Components/Home';
+import Buttom from './Components/Buttom';
 
 function App({ movie }) {
 
@@ -34,6 +35,7 @@ function App({ movie }) {
             <Route path={'/aboutus'} element={<Aboutus/>}/>
           </Routes>
           </BrowserRouter>
+         
         }
       </div> 
     </div>

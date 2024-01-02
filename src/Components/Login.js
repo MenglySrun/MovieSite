@@ -27,29 +27,29 @@ const goto = useNavigate()
   }
   return (
     <div class='login'>
-      <div className='bg-transparent'></div>
-      <div className='h-96 w-96 bg-red-500 items-center justify-center mx-96 rounded-xl mt-12 md:bg-green-500 ml-7 w-80 h-80'>
+      <div className='flex items-center justify-center font-mono'>
+      <div className='w-[40%] h-96 bg-blue-500 items-center justify-center mx-96 rounded-xl mt-12'>
         <form onSubmit={HandleLogin}>
           <h1 className='flex justify-center text-2xl font-extrabold pt-7'>Log In</h1><p/>
-          <label className='flex justify-center mt-7'>
-            Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <label className='flex justify-center mt-7 text-xl'>
+            Email:&nbsp;&nbsp;&nbsp;&nbsp;
             <input type='email' name='email' placeholder='Email' className='rounded text-sm pl-2'/>
-          </label><p />
-          <label className='flex justify-center mt-7'>
+          </label><p/>
+          <label className='flex justify-center mt-7 text-xl'>
             Password:
             <input type='password' name='password' placeholder='Password' className='rounded text-sm pl-2'/>
           </label>
-          <button type='submit' className='flex justify-center ml-32 mt-7 bg-blue-500 rounded text-sm font-light px-1'>Log In</button><p />
-        </form><p />
-        <div className='flext items-center justify-center'>
-
-          <div className='flex mt-2 text-black'>
-            <h1 className='text-sm font-extralight ml-24'>Not have account?</h1><Link to={'/signup'} className='text-sm font-extralight ml-1 text-white'>Sign Up</Link>
+          <div className='flex items-center justify-center'>
+          <button type='submit' className='w-16 h-7 flex justify-center items-center mt-7 bg-blue-500 rounded text-sm font-light px-1'>Log In</button><p/>
           </div>
-
+        </form><p />
+        <div className='flex items-center justify-center'>
+          <div className='flex mt-2 text-black'>
+            <h1 className='text-xl font-extralight'>Not have account?</h1><Link to={'/signup'} className='text-xl font-extralight ml-1 text-white'>Sign Up</Link>
+          </div>
         </div>
       </div>
-
+      </div>
     </div>
   )
 }

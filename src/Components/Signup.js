@@ -18,7 +18,6 @@ const Signup = ({history}) => {
     }, [history])
   return (
     <div class='login'>
-    <div className='bg-transparent'></div>
     <div className='h-96 w-96 bg-sky-500 items-center justify-center mx-96 rounded-xl mt-12'>
       <form onSubmit={HandleSignup}>
         <h1 className='flex justify-center text-2xl font-extrabold pt-7'>Sign Up</h1><p/>

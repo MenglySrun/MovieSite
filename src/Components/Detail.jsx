@@ -38,7 +38,7 @@ const Detail = () => {
            {
             displayTrailer&& (
               <div className='pt-5'>
-              <iframe width="420" height="245" allowFullScreen src={`https://www.youtube.com/embed/${trailerKey}`} ></iframe>
+              <iframe width="670" height="380" allowFullScreen src={`https://www.youtube.com/embed/${trailerKey}`} ></iframe>
               </div>
             )
            }
