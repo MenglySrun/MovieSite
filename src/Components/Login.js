@@ -45,7 +45,7 @@ const goto = useNavigate()
         </form><p />
         <div className='flex items-center justify-center'>
           <div className='flex mt-2 text-black'>
-            <h1 className='text-lg font-extralight'>Not have account?</h1><Link to={'/signup'} className='text-lg font-extralight ml-1 text-white'>Sign Up</Link>
+            <h1 className='text-sm font-extralight'>Not have account?</h1><Link to={'/signup'} className='text-sm font-extralight ml-1 text-white'>Sign Up</Link>
           </div>
         </div>
       </div>
