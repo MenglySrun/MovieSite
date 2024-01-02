@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import { FaSearch } from 'react-icons/fa'
-import { GrNotification } from 'react-icons/gr'
+import { IoNotifications } from "react-icons/io5";
 
 import { BiLogOutCircle } from 'react-icons/bi'
 import { BeatLoader } from 'react-spinners';
@@ -60,10 +60,10 @@ const List = () => {
                </ul>
             </div>
             <div className='flex'>
-               <input type="text" placeholder='Search here...' className='border-none rounded-l-lg bg-transparent text-white' value={keyWard} onChange={e => setKeyWard(e.target.value)} />
-               <button className=' bg-sky-500 rounded-r mr-3' onClick={() => { getAllMovie(keyWard); setKeyWard("") }}><FaSearch className='mx-1' /></button>
-               <GrNotification className='h-5 w-5 mr-3 text-white'/>
-               <button onClick={a} className='mr-7 rounded bg-red-500'><BiLogOutCircle /></button>
+               <input type="text" placeholder='Search here...' className='rounded-l-sm bg-inherit text-center text-white font-mono' value={keyWard} onChange={e => setKeyWard(e.target.value)} />
+               <button className=' bg-sky-500 rounded-r mr-3 w-7 h-7 flex items-center justify-center' onClick={() => { getAllMovie(keyWard); setKeyWard("") }}><FaSearch className='mx-1' /></button>
+               <IoNotifications className='h-7 w-7 mr-3 text-white'/>
+               <button onClick={a} className='w-7 h-7 flex items-center justify-center mr-7 rounded bg-red-500'><BiLogOutCircle /></button>
             </div>
          </div>
          {/*Slider Here*/}

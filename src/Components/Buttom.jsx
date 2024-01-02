@@ -7,8 +7,8 @@ const Buttom = () => {
   return (
     <div>
        <div className='h-32 bg-slate-500 pb-12 flex items-center justify-between'>
-            <div>
-
+            <div className='mx-5 font-mono space-x-1 pt-5'>
+               <p>It just a practice my react js project,<br/> you can fine your favourite movie here.</p>
             </div>
             <div className='flex gap-2'>
                <BsFacebook className='w-6 h-6 mr-2 hover:scale-125 transition duration-300 ease-in-out hover:cursor-pointer' />
