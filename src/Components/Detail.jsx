@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 const Detail = () => {
   const { id } = useParams();
   const [singleMovie, setSingleMovie] = useState({})
@@ -11,46 +11,46 @@ const Detail = () => {
     const url = `https://api.themoviedb.org/3/movie/${id}?api_key=7f16c59997f05e465818f219212725cb&&append_to_response=videos`
     const res = await fetch(url);
     const movie = await res.json();
-    
+
     setSingleMovie(movie)
     console.log(movie)
   }
   useEffect(() => {
     getMovie();
-    
+
   }, []);
 
-  
-  const playTrailer =()=>{
-    const trailer = singleMovie.videos.results.find((video)=>video.name === "Official Trailer")
+
+  const playTrailer = () => {
+    const trailer = singleMovie.videos.results.find((video) => video.name === "Official Trailer")
     setTrailerKey(trailer.key)
     setDisplayTrailer(!displayTrailer)
   }
   const url_img = 'https://image.tmdb.org/t/p/w500';
   return (
     <div>
-      <img src={url_img +singleMovie.backdrop_path} className='fixed w-full h-screen object-cover blur-sm -z-10' />
+      <img src={url_img + singleMovie.backdrop_path} className='fixed w-full h-screen object-cover blur-sm -z-10' />
       <div className='W-[70%] mx-auto'>
         <div className='flex justify-between'>
           <div className='pt-10 ml-32'>
-            <img src={url_img +singleMovie.poster_path} className='w-72 h-96 rounded-lg'/>
-            <button className='mt-5 rounded bg-red-500' onClick={playTrailer}>{displayTrailer?"Hide":"Trailer"}</button>
-           {
-            displayTrailer&& (
-              <div className='pt-5'>
-              <iframe width="670" height="380" allowFullScreen src={`https://www.youtube.com/embed/${trailerKey}`} ></iframe>
-              </div>
-            )
-           }
+            <img src={url_img + singleMovie.poster_path} className='w-72 h-96 rounded-lg' />
+            <button className=' h-9  w-16 mt-5 rounded bg-red-500' onClick={playTrailer}>{displayTrailer ? "Stop" : "Watch"}</button>
+            {
+              displayTrailer && (
+                <div className='pt-5'>
+                  <iframe width="670" height="380" allowFullScreen src={`https://www.youtube.com/embed/${trailerKey}`} ></iframe>
+                </div>
+              )
+            }
           </div>
           <div className='fixed right-0 backdrop-blur-lg h-screen w-[50vw] top-0 flex flex-col p-10 overflow-hidden'>
             <motion.div layout>
-            <h1 className='mt-10 font-semibold text-2xl tracking-wide'>{singleMovie.title}</h1>
+              <h1 className='mt-10 font-semibold text-2xl tracking-wide'>{singleMovie.title}</h1>
             </motion.div>
             <p className='mt-10 font-mono text-2xl tracking-wide text-white'>Release Date:{singleMovie.release_date}</p>
             <p className='mt-10 font-extralight text-2xl tracking-wide text-white font-mono'>&nbsp;&nbsp;&nbsp;{singleMovie.overview}</p>
             <motion.div>
-            <hr className='mt-7'/>
+              <hr className='mt-7' />
             </motion.div>
           </div>
         </div>
